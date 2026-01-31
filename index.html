@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Music Launch helps music teachers find and keep students with a done-with-you marketing system. Pay nothing until it works.">
+    <meta name="keywords" content="music teacher marketing, find music students, music teaching business, piano teacher marketing">
+    <meta name="author" content="Music Launch">
+    <title>Music Launch | Fill Your Teaching Calendar</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Music Launch | Fill Your Teaching Calendar">
+    <meta property="og:description" content="A done-with-you marketing system that helps music teachers find and keep students. Pay nothing until it works.">
+    <meta property="og:image" content="https://musiclaunch.co.uk/images/og-image.png">
+    <meta property="og:url" content="https://musiclaunch.co.uk">
+    <meta property="og:site_name" content="Music Launch">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Music Launch | Fill Your Teaching Calendar">
+    <meta name="twitter:description" content="A done-with-you marketing system that helps music teachers find and keep students.">
+    <meta name="twitter:image" content="https://musiclaunch.co.uk/images/og-image.png">
+
+    <!-- Canonical & Other -->
+    <link rel="canonical" href="https://musiclaunch.co.uk/">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="GB">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What instruments do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Currently focused on piano, but the system works for any instrument. If you teach something else, let's chat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until I get students?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most teachers see first leads within a week. First enrolments typically within 2-3 weeks. Time to 5 monthly students is usually 2-3 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be good at sales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not at all. We give you conversation frameworks that feel natural. Many teachers say they actually enjoy parent conversations now."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be tech-savvy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nope. We handle technical setup. If you can send an email, you can do this."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the catch with the pricing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No catch. We only succeed if you succeed. Our model is built on long-term partnerships, not upfront fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between standard and Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard: We build, you run it. Pro: We manage everything ongoing. Same 'nothing until 5 students' start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I cancel anytime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Rolling monthly with 30 days notice once fees begin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I already have students. Can I still join?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Many teachers join with existing students and use the system to fill remaining capacity."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Music Launch",
+      "description": "Done-with-you marketing system for music teachers",
+      "provider": {
+        "@type": "Organization",
+        "name": "Music Launch",
+        "url": "https://musiclaunch.co.uk"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "serviceType": "Marketing Services for Music Teachers"
+    }
+    </script>
+
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1F2937;
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .text-muted {
+            color: #6B7280;
+        }
+
+        .text-small {
+            font-size: 0.875rem;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .bg-light {
+            background-color: #F8FAFC;
+        }
+
+        .bg-dark {
+            background-color: #1F2937;
+            color: #FFFFFF;
+        }
+
+        .bg-primary {
+            background-color: #7C3AED;
+            color: #FFFFFF;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #7C3AED;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1F2937;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #7C3AED;
+        }
+
+        .nav-cta {
+            background-color: #F59E0B;
+            color: #FFFFFF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background-color: #D97706;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #1F2937;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: #FFFFFF;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: #1F2937;
+            border-bottom: 1px solid #F8FAFC;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #F59E0B;
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: #D97706;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #7C3AED;
+            color: #FFFFFF;
+        }
+
+        .btn-secondary:hover {
+            background-color: #6D28D9;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #7C3AED;
+            color: #7C3AED;
+        }
+
+        .btn-outline:hover {
+            background-color: #7C3AED;
+            color: #FFFFFF;
+        }
+
+        .btn-small {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(245, 243, 255, 0.92) 0%, rgba(237, 233, 254, 0.88) 50%, rgba(221, 214, 254, 0.85) 100%);
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 50%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(167, 139, 250, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 3;
+            text-align: left;
+        }
+
+        @media (max-width: 1023px) {
+            .hero-content {
+                text-align: center;
+                max-width: 100%;
+            }
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 3;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-image {
+                display: block;
+            }
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .hero-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #7C3AED;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+            color: #1F2937;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+        }
+
+        .hero h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #4B5563;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-note {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #6B7280;
+        }
+
+        /* Proof Section */
+        .proof-section {
+            background: #FFFFFF;
+            padding: 4rem 0;
+        }
+
+        .proof-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .proof-intro p {
+            font-size: 1.25rem;
+            color: #4B5563;
+        }
+
+        .proof-stats {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .proof-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .proof-stat {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+            border-radius: 12px;
+        }
+
+        .proof-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #7C3AED;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .proof-stat-label {
+            font-size: 1rem;
+            color: #6B7280;
+            font-weight: 500;
+        }
+
+        /* ===== PROBLEM SECTION ===== */
+        .problem-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .problem-content p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-content p:last-child {
+            font-weight: 600;
+            color: #7C3AED;
+            font-size: 1.25rem;
+        }
+
+        /* ===== SOLUTION SECTION ===== */
+        .solution-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .solution-content .subtitle {
+            font-size: 1.25rem;
+            color: #7C3AED;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .solution-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .solution-video {
+            order: -1;
+        }
+
+        @media (min-width: 768px) {
+            .solution-video {
+                order: 0;
+            }
+        }
+
+        .solution-video video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+        }
+
+        .solution-content p {
+            font-size: 1.125rem;
+            text-align: left;
+        }
+
+        /* ===== CARDS GRID ===== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .card {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #7C3AED;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #6B7280;
+            margin-bottom: 0;
+        }
+
+        /* ===== CHECKLIST SECTION ===== */
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .checklist-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .checklist-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .checklist-column h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #7C3AED;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #7C3AED;
+        }
+
+        .checklist-column ul {
+            list-style: none;
+        }
+
+        .checklist-column li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: #1F2937;
+        }
+
+        .checklist-column li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 700;
+        }
+
+        /* ===== NUMBERS SECTION ===== */
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .numbers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .numbers-box {
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+
+        .numbers-box.before {
+            background: #FEF3C7;
+            border: 2px solid #F59E0B;
+        }
+
+        .numbers-box.after {
+            background: #DCFCE7;
+            border: 2px solid #10B981;
+        }
+
+        .numbers-box h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .numbers-box.before h4 {
+            color: #D97706;
+        }
+
+        .numbers-box.after h4 {
+            color: #059669;
+        }
+
+        .numbers-box ul {
+            list-style: none;
+        }
+
+        .numbers-box li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+        }
+
+        .year-two-callout {
+            background: #7C3AED;
+            color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .year-two-callout p {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .disclaimer {
+            margin-top: 2rem;
+            font-style: italic;
+            color: #6B7280;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        /* ===== CALCULATOR SECTION ===== */
+        .calculator-card {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            color: #FFFFFF;
+        }
+
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .calculator-inputs {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .input-group input[type="range"] {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .input-group input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #F59E0B;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .input-group input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            background: #F59E0B;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .calculator-results {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 600px) {
+            .calculator-results {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .result-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result-box.highlight {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid #F59E0B;
+        }
+
+        .result-box .label {
+            display: block;
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-box .value {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .result-box .net-label {
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 0.25rem;
+        }
+
+        .calculator-disclaimer {
+            text-align: center;
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing-card {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: #FFFFFF;
+            padding: 3rem;
+            border-radius: 8px;
+            border: 3px solid #7C3AED;
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+            text-align: center;
+        }
+
+        .pricing-card .subtitle {
+            color: #7C3AED;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-breakdown {
+            background: #F8FAFC;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .pricing-breakdown p {
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .pricing-breakdown .highlight {
+            font-weight: 700;
+            color: #7C3AED;
+            font-size: 1.375rem;
+            margin-top: 1rem;
+        }
+
+        .pricing-note {
+            background: #FEF3C7;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: #92400E;
+        }
+
+        /* ===== PRO SECTION ===== */
+        .pro-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #6D28D9 0%, #7C3AED 100%);
+            color: #FFFFFF;
+            padding: 3rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pro-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: -2rem;
+            background: #F59E0B;
+            color: #FFFFFF;
+            padding: 0.5rem 3rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            transform: rotate(45deg);
+        }
+
+        .pro-card h3 {
+            color: #FFFFFF;
+        }
+
+        .pro-card .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pro-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pro-features li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .pro-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #F59E0B;
+            font-weight: 700;
+        }
+
+        .pro-pricing {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .pro-cta {
+            text-align: center;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* ===== COMPARISON SECTION ===== */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .comparison-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .comparison-card {
+            padding: 2rem;
+            border-radius: 8px;
+            background: #FFFFFF;
+        }
+
+        .comparison-card.negative {
+            border: 2px solid #FEE2E2;
+        }
+
+        .comparison-card.positive {
+            border: 3px solid #10B981;
+            background: #ECFDF5;
+        }
+
+        .comparison-card h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid currentColor;
+        }
+
+        .comparison-card.negative h4 {
+            color: #DC2626;
+        }
+
+        .comparison-card.positive h4 {
+            color: #059669;
+        }
+
+        .comparison-card ul {
+            list-style: none;
+        }
+
+        .comparison-card li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .comparison-card.negative li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #DC2626;
+            font-weight: 700;
+        }
+
+        .comparison-card.positive li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 700;
+        }
+
+        /* ===== WHO FOR SECTION ===== */
+        .who-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .who-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .who-card {
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+
+        .who-card.yes {
+            background: #ECFDF5;
+            border: 2px solid #10B981;
+        }
+
+        .who-card.no {
+            background: #FEF2F2;
+            border: 2px solid #FCA5A5;
+        }
+
+        .who-card h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .who-card.yes h4 {
+            color: #059669;
+        }
+
+        .who-card.no h4 {
+            color: #DC2626;
+        }
+
+        .who-card ul {
+            list-style: none;
+        }
+
+        .who-card li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .who-card.yes li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 700;
+        }
+
+        .who-card.no li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #DC2626;
+            font-weight: 700;
+        }
+
+        /* ===== FAQ SECTION (Accordion) ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: #1F2937;
+            text-align: left;
+        }
+
+        .faq-question:hover {
+            color: #7C3AED;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: #7C3AED;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: #6B7280;
+            margin-bottom: 0;
+        }
+
+        /* ===== FINAL CTA SECTION ===== */
+        .final-cta {
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .final-cta h2 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .note {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .hubspot-embed {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            min-height: 600px;
+        }
+
+        .meetings-iframe-container {
+            min-height: 550px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            margin: 0 0.5rem;
+        }
+
+        /* ===== STICKY CTA BAR ===== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1F2937;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            z-index: 998;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .sticky-cta-text {
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+
+        .sticky-cta-close {
+            background: none;
+            border: none;
+            color: #9CA3AF;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            line-height: 1;
+        }
+
+        .sticky-cta-close:hover {
+            color: #FFFFFF;
+        }
+
+        @media (min-width: 768px) {
+            .sticky-cta {
+                top: 70px;
+                bottom: auto;
+                transform: translateY(-100%);
+            }
+            .sticky-cta.visible {
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== EXIT POPUP ===== */
+        .exit-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .exit-popup-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .exit-popup {
+            background: #FFFFFF;
+            padding: 3rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .exit-popup-overlay.visible .exit-popup {
+            transform: scale(1);
+        }
+
+        .exit-popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #9CA3AF;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .exit-popup-close:hover {
+            color: #1F2937;
+        }
+
+        .exit-popup h3 {
+            color: #7C3AED;
+            margin-bottom: 0.5rem;
+        }
+
+        .exit-popup h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #1F2937;
+        }
+
+        .exit-popup-description {
+            color: #6B7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .exit-popup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .exit-popup-form input {
+            padding: 1rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .exit-popup-form input:focus {
+            outline: none;
+            border-color: #7C3AED;
+        }
+
+        .exit-popup-note {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* ===== SOCIAL PROOF TOAST ===== */
+        .social-proof-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 1rem;
+            background: #FFFFFF;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 997;
+            transform: translateX(-120%);
+            transition: transform 0.4s ease;
+            max-width: 300px;
+        }
+
+        .social-proof-toast.visible {
+            transform: translateX(0);
+        }
+
+        .toast-icon {
+            font-size: 1.5rem;
+        }
+
+        .toast-content {
+            line-height: 1.3;
+        }
+
+        .toast-name {
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 0.125rem;
+            font-size: 0.875rem;
+        }
+
+        .toast-action {
+            color: #6B7280;
+            font-size: 0.8rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 480px) {
+            .social-proof-toast {
+                left: 0.5rem;
+                right: 0.5rem;
+                max-width: none;
+            }
+        }
+
+        /* ===== COOKIE BANNER ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1F2937;
+            padding: 1.5rem;
+            z-index: 1999;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .cookie-banner.visible {
+            transform: translateY(0);
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .cookie-content {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .cookie-content p {
+            color: #D1D5DB;
+            margin-bottom: 0;
+            font-size: 0.875rem;
+        }
+
+        .cookie-content a {
+            color: #A78BFA;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .cookie-buttons .btn-outline {
+            border-color: #6B7280;
+            color: #D1D5DB;
+        }
+
+        .cookie-buttons .btn-outline:hover {
+            background: #374151;
+            border-color: #9CA3AF;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mt-3 { margin-top: 1.5rem; }
+        .mt-4 { margin-top: 2rem; }
+
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><img src="images/logo.png" alt="Music Launch" class="logo-img" loading="lazy" width="120" height="40"></a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="https://meetings-eu1.hubspot.com/gmalna" class="nav-cta">Book a Call</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#how-it-works" onclick="toggleMobileMenu()">How It Works</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="https://meetings-eu1.hubspot.com/gmalna" onclick="toggleMobileMenu()">Book a Call</a>
+    </div>
+
+    <main>
+        <!-- SECTION 1: Hero -->
+        <section class="hero" id="home">
+            <!-- Video Background -->
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline poster="images/hero.png">
+                    <source src="images/hero-video.mp4" type="video/mp4">
+                </video>
+                <div class="hero-video-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <p class="hero-eyebrow">Music Teachers</p>
+                    <h1>Would you like more students?</h1>
+                    <h3>What if you could fill your teaching calendar without the awkward sales conversations, the "I'll think about it" parents, or the students who quit after three lessons?</h3>
+                    <a href="https://meetings-eu1.hubspot.com/gmalna" class="btn btn-primary">Book a Free Discovery Call</a>
+                    <p class="hero-note">No cost until it works. Seriously.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero.png" alt="Piano teacher with student - Music Launch helps you find and keep students" loading="lazy" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Proof Section -->
+        <section class="proof-section">
+            <div class="container">
+                <div class="proof-intro">
+                    <p>Music Launch is a done-with-you system that brings you qualified students, helps you convert them, and keeps them playing for years.</p>
+                </div>
+                <div class="proof-stats">
+                    <div class="proof-stat">
+                        <div class="proof-stat-number" data-target="200" data-suffix="%">0%</div>
+                        <div class="proof-stat-label">Average increase in income</div>
+                    </div>
+                    <div class="proof-stat">
+                        <div class="proof-stat-number" data-target="24" data-suffix="hrs">0hrs</div>
+                        <div class="proof-stat-label">Admin time saved each month</div>
+                    </div>
+                    <div class="proof-stat">
+                        <div class="proof-stat-number" data-target="60" data-suffix="%">0%</div>
+                        <div class="proof-stat-label">Lead to student conversion rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: The Problem -->
+        <section class="bg-light" id="problem">
+            <div class="container">
+                <div class="problem-content">
+                    <h2 class="text-center">Let's be honest about how most music teaching works...</h2>
+
+                    <p>You're brilliant at teaching. You trained for years. You know how to take a complete beginner and turn them into a confident musician.</p>
+
+                    <p>But nobody taught you how to find those students.</p>
+
+                    <p>So you rely on word of mouth. You maybe list yourself on a directory (and watch them take 20% forever). You try posting on Facebook groups and feel a bit desperate.</p>
+
+                    <p>And when enquiries do come in, you're not quite sure what to say. You quote your hourly rate. They say they'll "think about it." You never hear from them again.</p>
+
+                    <p>Meanwhile, the students you do get often quit after a few months. The parents don't really know if it's working. Practice is a battle. Everyone loses motivation.</p>
+
+                    <p>It doesn't have to be like this.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: The Solution -->
+        <section id="solution">
+            <div class="container">
+                <div class="solution-grid">
+                    <div class="solution-content">
+                        <h2>Introducing Music Launch</h2>
+                        <p class="subtitle">A complete system for finding, converting, and keeping great students.</p>
+
+                        <p>Music Launch isn't a course you have to implement yourself. It's not a marketplace that owns your students. It's not a franchise that puts their name above your door.</p>
+
+                        <p>It's a done-with-you partnership.</p>
+
+                        <p>We build your marketing. We give you proven frameworks for parent conversations. We provide systems to keep parents engaged and students progressing.</p>
+
+                        <p>You stay focused on what you're great at: teaching.</p>
+                    </div>
+                    <div class="solution-video">
+                        <video autoplay muted loop playsinline poster="images/featured.png">
+                            <source src="images/featured-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: How It Works -->
+        <section class="bg-light" id="how-it-works">
+            <div class="container">
+                <h2 class="text-center">Here's what happens when you join</h2>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>We Build Your Marketing</h3>
+                        <p>We create a landing page that actually converts. We write ad copy that speaks to parents (not musicians). We set up your Facebook and Instagram ads and manage them for the first 30 days. You don't need to be "good at marketing." That's our job.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>We Give You Frameworks That Convert</h3>
+                        <p>You'll get proven conversation frameworks for speaking with parents — scripts that feel natural, not salesy. We'll walk you through them, answer your questions, and be there to support your first few calls.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>You Deliver an Experience Parents Rave About</h3>
+                        <p>Our system includes weekly parent updates, practice tracking, and regular recitals — all designed to keep parents engaged and students motivated. Happy parents become walking testimonials.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>You Keep More of What You Earn</h3>
+                        <p>Unlike marketplaces that take 20% forever, our fees are simple and fair. And you pay nothing until the system is working.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: What You Get -->
+        <section id="what-you-get">
+            <div class="container">
+                <h2 class="text-center">Everything you need to build a thriving teaching practice</h2>
+
+                <div class="checklist-grid">
+                    <div class="checklist-column">
+                        <h4>Marketing (We Build This)</h4>
+                        <ul>
+                            <li>Custom landing page on your own domain</li>
+                            <li>Lead magnet to capture parent interest</li>
+                            <li>Facebook/Instagram ad campaign setup</li>
+                            <li>30 days of ad management included</li>
+                            <li>Ad copy and creative designed to convert</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-column">
+                        <h4>Conversion (We Give You The Tools)</h4>
+                        <ul>
+                            <li>Parent conversation framework</li>
+                            <li>Structured offer that parents understand</li>
+                            <li>Response templates for common questions</li>
+                            <li>Support during your first enquiries</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-column">
+                        <h4>Retention (We Give You The Process)</h4>
+                        <ul>
+                            <li>Weekly parent update framework</li>
+                            <li>Practice tracking system (Progress Pulse™)</li>
+                            <li>Recital planning guide</li>
+                            <li>Continuity offer (The Mastery Path™)</li>
+                            <li>All templates: emails, scripts, checklists</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li>Weekly coaching calls for your first month</li>
+                            <li>Monthly check-ins ongoing</li>
+                            <li>Access to the founder</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: The Numbers -->
+        <section class="bg-light" id="numbers">
+            <div class="container">
+                <h2 class="text-center">Let's talk money</h2>
+                <p class="text-center text-muted mb-4">Here's what a Music Launch teacher's first year can look like</p>
+
+                <div class="numbers-grid">
+                    <div class="numbers-box before">
+                        <h4>Before Music Launch</h4>
+                        <ul>
+                            <li>15 students at £30/hour</li>
+                            <li>~£22,000/year revenue</li>
+                            <li>7+ hours/week on admin</li>
+                            <li>Unpredictable income</li>
+                            <li>Constant worry about finding students</li>
+                        </ul>
+                    </div>
+
+                    <div class="numbers-box after">
+                        <h4>After Music Launch (Year 1)</h4>
+                        <ul>
+                            <li>20 students on structured programmes</li>
+                            <li>~£32,000/year revenue</li>
+                            <li>Music Launch fees: ~£3,500/year</li>
+                            <li>Your net: ~£28,500</li>
+                            <li>Predictable monthly income</li>
+                            <li>1-2 hours/week on admin</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="year-two-callout">
+                    <p>Year 2+: £45,000-52,000 revenue → £40,000-46,000 net. Waiting list for students.</p>
+                </div>
+
+                <p class="disclaimer">These are illustrative examples. Your results depend on location, availability, and instrument.</p>
+            </div>
+        </section>
+
+        <!-- ROI Calculator Section -->
+        <section id="calculator">
+            <div class="container">
+                <h2 class="text-center">See Your Potential</h2>
+                <p class="text-center text-muted">Adjust the sliders to see what Music Launch could mean for you</p>
+
+                <div class="calculator-card">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label>Current students: <span id="studentCount">15</span></label>
+                            <input type="range" id="studentSlider" min="0" max="30" value="15">
+                        </div>
+                        <div class="input-group">
+                            <label>Hourly rate: £<span id="rateAmount">30</span></label>
+                            <input type="range" id="rateSlider" min="20" max="60" value="30">
+                        </div>
+                    </div>
+
+                    <div class="calculator-results">
+                        <div class="result-box current">
+                            <span class="label">Current Annual Income</span>
+                            <span class="value" id="currentIncome">£18,000</span>
+                        </div>
+                        <div class="result-box year1">
+                            <span class="label">Year 1 with Music Launch</span>
+                            <span class="value" id="year1Income">£24,860</span>
+                            <span class="net-label">(net after fees)</span>
+                        </div>
+                        <div class="result-box year2 highlight">
+                            <span class="label">Year 2 Potential</span>
+                            <span class="value" id="year2Income">£28,860</span>
+                            <span class="net-label">(net after fees)</span>
+                        </div>
+                    </div>
+
+                    <p class="calculator-disclaimer">Estimates based on 40 teaching weeks/year. Results vary by location and availability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Pricing -->
+        <section class="bg-light" id="pricing">
+            <div class="container">
+                <h2 class="text-center">Pay nothing until it works.</h2>
+
+                <div class="pricing-card">
+                    <p class="subtitle">No, really.</p>
+
+                    <p>Most programmes charge you thousands upfront and hope it works out.</p>
+                    <p>We do things differently.</p>
+
+                    <div class="pricing-breakdown">
+                        <p>You pay £0 to join.</p>
+                        <p>You pay £0 during setup.</p>
+                        <p>You pay £0 while we launch your ads.</p>
+                        <p>You pay £0 until you have 5 students on monthly plans.</p>
+                        <p class="highlight">Only then do fees begin:<br>£95/month platform fee + 10% of your lesson revenue.</p>
+                    </div>
+
+                    <p>That's it. No hidden costs. No complicated calculations.</p>
+                    <p><strong>If we don't help you build a real business, you don't pay us.</strong></p>
+
+                    <div class="pricing-note">
+                        (You do pay for your own ad spend — typically £150-250/month. That goes to Facebook, not us.)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Done For You Option -->
+        <section id="pro">
+            <div class="container">
+                <h2 class="text-center">Want us to handle everything?</h2>
+
+                <div class="pro-card">
+                    <div class="pro-badge">PRO</div>
+
+                    <h3>Music Launch Pro: Done For You</h3>
+                    <p class="subtitle">For teachers who want to focus purely on teaching.</p>
+
+                    <p>With Music Launch Pro, we handle everything:</p>
+
+                    <ul class="pro-features">
+                        <li>Ongoing ad management (not just the first 30 days)</li>
+                        <li>We respond to leads and book calls into your calendar</li>
+                        <li>Monthly creative refresh</li>
+                        <li>Detailed monthly reporting</li>
+                        <li>Priority support</li>
+                    </ul>
+
+                    <p>You just show up, talk to interested parents, and teach.</p>
+
+                    <div class="pro-pricing">
+                        <p><strong>Pricing:</strong> Same start (nothing until 5 monthly students), then £195/month + 15% revenue share.</p>
+                    </div>
+
+                    <p class="pro-cta">Not sure which is right for you? We'll help you decide on the discovery call.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: Comparison -->
+        <section class="bg-light" id="comparison">
+            <div class="container">
+                <h2 class="text-center">How Music Launch compares</h2>
+
+                <div class="comparison-grid">
+                    <div class="comparison-card negative">
+                        <h4>Marketplaces (Superprof, etc.)</h4>
+                        <ul>
+                            <li>Take 15-25% forever</li>
+                            <li>They own the customer</li>
+                            <li>You compete on price</li>
+                            <li>No support or systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card negative">
+                        <h4>Franchises</h4>
+                        <ul>
+                            <li>£10,000-40,000 upfront</li>
+                            <li>Their brand, not yours</li>
+                            <li>Locked into their curriculum</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card negative">
+                        <h4>DIY Courses</h4>
+                        <ul>
+                            <li>You implement everything yourself</li>
+                            <li>No accountability</li>
+                            <li>Generic advice</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card positive">
+                        <h4>Music Launch</h4>
+                        <ul>
+                            <li>Pay nothing until 5 monthly students</li>
+                            <li>Your brand, your students</li>
+                            <li>Done-with-you OR done-for-you</li>
+                            <li>Ongoing support</li>
+                            <li>UK-specific</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Who This Is For -->
+        <section id="who">
+            <div class="container">
+                <h2 class="text-center">Is this right for you?</h2>
+
+                <div class="who-grid">
+                    <div class="who-card yes">
+                        <h4>This is for you if:</h4>
+                        <ul>
+                            <li>You're a skilled teacher who wants more students</li>
+                            <li>You're tired of undercharging and overworking</li>
+                            <li>You want to build a real business</li>
+                            <li>You're open to following a structured approach</li>
+                            <li>You can commit £150-250/month to ad spend</li>
+                            <li>You have capacity for at least 4 new students</li>
+                        </ul>
+                    </div>
+
+                    <div class="who-card no">
+                        <h4>This isn't for you if:</h4>
+                        <ul>
+                            <li>You're looking for a get-rich-quick scheme</li>
+                            <li>You're not willing to follow a proven system</li>
+                            <li>You don't believe in charging what you're worth</li>
+                            <li>You're already fully booked</li>
+                            <li>You want results without putting in effort</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11: FAQ (Accordion) -->
+        <section class="bg-light" id="faq">
+            <div class="container">
+                <h2 class="text-center">Questions you might have</h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What instruments do you work with?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Currently focused on piano, but the system works for any instrument. If you teach something else, let's chat.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How long until I get students?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most teachers see first leads within a week. First enrolments typically within 2-3 weeks. Time to 5 monthly students is usually 2-3 months.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Do I need to be good at sales?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Not at all. We give you conversation frameworks that feel natural. Many teachers say they actually enjoy parent conversations now.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Do I need to be tech-savvy?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nope. We handle technical setup. If you can send an email, you can do this.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What's the catch with the pricing?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No catch. We only succeed if you succeed. Our model is built on long-term partnerships, not upfront fees.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What's the difference between standard and Pro?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Standard: We build, you run it. Pro: We manage everything ongoing. Same "nothing until 5 students" start.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Can I cancel anytime?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Rolling monthly with 30 days notice once fees begin.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            I already have students. Can I still join?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. Many teachers join with existing students and use the system to fill remaining capacity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12: Final CTA with HubSpot Embed -->
+        <section class="bg-primary final-cta" id="booking">
+            <div class="container">
+                <h2>Ready to fill your teaching calendar?</h2>
+                <p class="subtitle">Book a free discovery call. No pressure, no pitch — just a conversation about whether this is right for you.</p>
+
+                <div class="hubspot-embed">
+                    <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/gmalna?embed=true"></div>
+                </div>
+
+                <p class="note">30 minutes. Zero obligation. Let's see if we're a good fit.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Music Launch</p>
+            <p><a href="mailto:hello@musiclaunch.co.uk">hello@musiclaunch.co.uk</a></p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-cta-content">
+            <span class="sticky-cta-text">Ready to fill your calendar?</span>
+            <a href="#booking" class="btn btn-primary btn-small">Book Free Call</a>
+        </div>
+        <button class="sticky-cta-close" onclick="closeStickyCta()" aria-label="Close">&times;</button>
+    </div>
+
+    <!-- Exit Popup -->
+    <div class="exit-popup-overlay" id="exitPopup">
+        <div class="exit-popup">
+            <button class="exit-popup-close" onclick="closeExitPopup()" aria-label="Close">&times;</button>
+            <div class="exit-popup-content">
+                <h3>Wait! Before you go...</h3>
+                <p>Download our free guide:</p>
+                <h4>5 Questions Every Parent Asks (And How to Answer Them)</h4>
+                <p class="exit-popup-description">Learn the exact responses that turn curious parents into committed students.</p>
+                <form class="exit-popup-form" onsubmit="handleExitFormSubmit(event)">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Send Me The Guide</button>
+                </form>
+                <p class="exit-popup-note">No spam. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Proof Toast -->
+    <div class="social-proof-toast" id="socialProofToast">
+        <div class="toast-icon">🎹</div>
+        <div class="toast-content">
+            <p class="toast-name" id="toastName">Sarah from Manchester</p>
+            <p class="toast-action" id="toastAction">just booked a discovery call</p>
+        </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>We use cookies to improve your experience and for marketing. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons">
+                <button class="btn btn-outline btn-small" onclick="declineCookies()">Decline</button>
+                <button class="btn btn-primary btn-small" onclick="acceptCookies()">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HubSpot Embed Script -->
+    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+
+    <!-- Main JavaScript -->
+    <script>
+        // Dynamic copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            document.querySelectorAll('.faq-item.active').forEach(item => {
+                item.classList.remove('active');
+            });
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // ROI Calculator
+        function calculateROI() {
+            const students = parseInt(document.getElementById('studentSlider').value);
+            const rate = parseInt(document.getElementById('rateSlider').value);
+            const weeksPerYear = 40;
+
+            const currentIncome = students * rate * weeksPerYear;
+            const year1Students = students + 5;
+            const year1Gross = year1Students * rate * weeksPerYear;
+            const year1Fees = (95 * 12) + (year1Gross * 0.10);
+            const year1Net = year1Gross - year1Fees;
+            const year2Students = students + 10;
+            const year2Gross = year2Students * rate * weeksPerYear;
+            const year2Fees = (95 * 12) + (year2Gross * 0.10);
+            const year2Net = year2Gross - year2Fees;
+
+            animateValue('currentIncome', currentIncome);
+            animateValue('year1Income', Math.max(0, year1Net));
+            animateValue('year2Income', Math.max(0, year2Net));
+
+            document.getElementById('studentCount').textContent = students;
+            document.getElementById('rateAmount').textContent = rate;
+        }
+
+        function animateValue(elementId, endValue) {
+            const element = document.getElementById(elementId);
+            const duration = 500;
+            const startValue = parseInt(element.textContent.replace(/[£,]/g, '')) || 0;
+            const increment = (endValue - startValue) / (duration / 16);
+            let current = startValue;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if ((increment > 0 && current >= endValue) || (increment < 0 && current <= endValue)) {
+                    element.textContent = '£' + Math.round(endValue).toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = '£' + Math.round(current).toLocaleString();
+                }
+            }, 16);
+        }
+
+        document.getElementById('studentSlider').addEventListener('input', calculateROI);
+        document.getElementById('rateSlider').addEventListener('input', calculateROI);
+        calculateROI();
+
+        // Animated Stats Counter
+        function animateCounter(element, target, suffix) {
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(target * easeOut);
+                element.textContent = current + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stats = entry.target.querySelectorAll('.proof-stat-number');
+                    stats.forEach(stat => {
+                        const target = parseInt(stat.dataset.target);
+                        const suffix = stat.dataset.suffix;
+                        animateCounter(stat, target, suffix);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const proofSection = document.querySelector('.proof-stats');
+        if (proofSection) {
+            statsObserver.observe(proofSection);
+        }
+
+        // Sticky CTA Bar
+        let stickyClosed = false;
+
+        function handleStickyScroll() {
+            if (stickyClosed) return;
+            const hero = document.querySelector('.hero');
+            const stickyCta = document.getElementById('stickyCta');
+            const heroBottom = hero.offsetTop + hero.offsetHeight;
+            if (window.scrollY > heroBottom) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        }
+
+        function closeStickyCta() {
+            document.getElementById('stickyCta').classList.remove('visible');
+            stickyClosed = true;
+        }
+
+        window.addEventListener('scroll', handleStickyScroll);
+
+        // Exit Intent Popup
+        let exitPopupShown = false;
+
+        function showExitPopup() {
+            if (exitPopupShown || sessionStorage.getItem('exitPopupShown')) return;
+            document.getElementById('exitPopup').classList.add('visible');
+            exitPopupShown = true;
+            sessionStorage.setItem('exitPopupShown', 'true');
+        }
+
+        function closeExitPopup() {
+            document.getElementById('exitPopup').classList.remove('visible');
+        }
+
+        function handleExitFormSubmit(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input').value;
+            console.log('Lead captured:', email);
+            alert('Thanks! Check your inbox for the guide.');
+            closeExitPopup();
+        }
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY < 10 && window.innerWidth > 768) {
+                showExitPopup();
+            }
+        });
+
+        document.getElementById('exitPopup').addEventListener('click', (e) => {
+            if (e.target.id === 'exitPopup') {
+                closeExitPopup();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeExitPopup();
+            }
+        });
+
+        // Social Proof Notifications
+        const socialProofData = [
+            { name: "Sarah from Manchester", action: "just booked a discovery call" },
+            { name: "James from Bristol", action: "joined Music Launch yesterday" },
+            { name: "Emma from London", action: "got her first 3 leads this week" },
+            { name: "David from Edinburgh", action: "just booked a discovery call" },
+            { name: "Sophie from Birmingham", action: "converted 4 students last month" },
+            { name: "Michael from Leeds", action: "just signed up for Music Launch Pro" },
+            { name: "Charlotte from Oxford", action: "filled her calendar in 6 weeks" }
+        ];
+
+        let currentProofIndex = 0;
+
+        function showSocialProof() {
+            const toast = document.getElementById('socialProofToast');
+            const nameEl = document.getElementById('toastName');
+            const actionEl = document.getElementById('toastAction');
+
+            const proof = socialProofData[currentProofIndex];
+            nameEl.textContent = proof.name;
+            actionEl.textContent = proof.action;
+
+            toast.classList.add('visible');
+
+            setTimeout(() => {
+                toast.classList.remove('visible');
+            }, 4000);
+
+            currentProofIndex = (currentProofIndex + 1) % socialProofData.length;
+        }
+
+        setTimeout(() => {
+            showSocialProof();
+            setInterval(showSocialProof, 18000);
+        }, 10000);
+
+        // Cookie Consent
+        function checkCookieConsent() {
+            if (!localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    document.getElementById('cookieBanner').classList.add('visible');
+                }, 2000);
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('visible');
+            loadTrackingScripts();
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('visible');
+        }
+
+        function loadTrackingScripts() {
+            console.log('Tracking scripts loaded');
+        }
+
+        document.addEventListener('DOMContentLoaded', checkCookieConsent);
+    </script>
+</body>
+</html>
