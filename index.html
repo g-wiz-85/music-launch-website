@@ -1389,6 +1389,8 @@
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
+            padding: 1rem;
+            overflow-y: auto;
         }
 
         .exit-popup-overlay.visible {
@@ -1398,14 +1400,23 @@
 
         .exit-popup {
             background: #FFFFFF;
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 12px;
-            max-width: 500px;
-            width: 90%;
+            max-width: 450px;
+            width: 100%;
             position: relative;
             text-align: center;
             transform: scale(0.9);
             transition: transform 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @media (max-width: 480px) {
+            .exit-popup {
+                padding: 1.5rem;
+                max-height: 85vh;
+            }
         }
 
         .exit-popup-overlay.visible .exit-popup {
@@ -1414,11 +1425,11 @@
 
         .exit-popup-close {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 0.75rem;
+            right: 0.75rem;
             background: none;
             border: none;
-            font-size: 2rem;
+            font-size: 1.75rem;
             color: #9CA3AF;
             cursor: pointer;
             line-height: 1;
@@ -1430,19 +1441,21 @@
 
         .exit-popup h3 {
             color: #7C3AED;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
+            font-size: 1.125rem;
         }
 
         .exit-popup h4 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin: 1rem 0;
+            font-size: 1.25rem;
+            margin: 0.75rem 0;
             color: #1F2937;
         }
 
         .exit-popup-description {
             color: #6B7280;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
 
         .exit-popup-form {
@@ -1472,19 +1485,25 @@
 
         /* HubSpot Form Styling */
         .exit-popup .hs-form-frame {
-            margin: 1.5rem 0;
+            margin: 1rem 0;
         }
 
-        .exit-popup .hs-form input[type="email"] {
+        .exit-popup .hs-form-frame iframe {
+            max-height: 200px !important;
+        }
+
+        .exit-popup .hs-form input[type="email"],
+        .exit-popup .hs-form input[type="text"] {
             width: 100%;
-            padding: 1rem;
+            padding: 0.75rem;
             border: 2px solid #E5E7EB;
             border-radius: 8px;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
         }
 
-        .exit-popup .hs-form input[type="email"]:focus {
+        .exit-popup .hs-form input[type="email"]:focus,
+        .exit-popup .hs-form input[type="text"]:focus {
             outline: none;
             border-color: #7C3AED;
         }
@@ -1494,10 +1513,10 @@
             width: 100%;
             background-color: #F59E0B;
             color: #FFFFFF;
-            padding: 1rem 2rem;
+            padding: 0.75rem 1.5rem;
             border: none;
             border-radius: 8px;
-            font-size: 1.125rem;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -1506,6 +1525,15 @@
         .exit-popup .hs-form input[type="submit"]:hover,
         .exit-popup .hs-form .hs-button:hover {
             background-color: #D97706;
+        }
+
+        .exit-popup .hs-form label {
+            display: none;
+        }
+
+        .exit-popup .hs-form .hs-error-msgs {
+            font-size: 0.75rem;
+            color: #DC2626;
         }
 
         /* ===== COOKIE BANNER ===== */
