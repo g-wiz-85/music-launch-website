@@ -1470,6 +1470,43 @@
             margin-bottom: 0;
         }
 
+        /* HubSpot Form Styling */
+        .exit-popup .hs-form-frame {
+            margin: 1.5rem 0;
+        }
+
+        .exit-popup .hs-form input[type="email"] {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .exit-popup .hs-form input[type="email"]:focus {
+            outline: none;
+            border-color: #7C3AED;
+        }
+
+        .exit-popup .hs-form input[type="submit"],
+        .exit-popup .hs-form .hs-button {
+            width: 100%;
+            background-color: #F59E0B;
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .exit-popup .hs-form input[type="submit"]:hover,
+        .exit-popup .hs-form .hs-button:hover {
+            background-color: #D97706;
+        }
 
         /* ===== COOKIE BANNER ===== */
         .cookie-banner {
@@ -2107,20 +2144,21 @@
         <button class="sticky-cta-close" onclick="closeStickyCta()" aria-label="Close">&times;</button>
     </div>
 
-    <!-- Exit Popup -->
+    <!-- Exit Intent Popup -->
     <div class="exit-popup-overlay" id="exitPopup">
         <div class="exit-popup">
             <button class="exit-popup-close" onclick="closeExitPopup()" aria-label="Close">&times;</button>
             <div class="exit-popup-content">
                 <h3>Wait! Before you go...</h3>
-                <p>Download our free guide:</p>
-                <h4>5 Questions Every Parent Asks (And How to Answer Them)</h4>
-                <p class="exit-popup-description">Learn the exact responses that turn curious parents into committed students.</p>
-                <form class="exit-popup-form" onsubmit="handleExitFormSubmit(event)">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn btn-primary">Send Me The Guide</button>
-                </form>
-                <p class="exit-popup-note">No spam. Unsubscribe anytime.</p>
+                <p>Download the free guide:</p>
+                <h4>The Music Teacher Money Model</h4>
+                <p class="exit-popup-description">How to stop trading time for money and build predictable, recurring income from your teaching practice.</p>
+
+                <!-- HubSpot Form -->
+                <script src="https://js-eu1.hsforms.net/forms/embed/147698665.js" defer></script>
+                <div class="hs-form-frame" data-region="eu1" data-form-id="fb75e9cf-bf1b-47c3-8553-1d43a1d901d1" data-portal-id="147698665"></div>
+
+                <p class="exit-popup-note">Free instant download. No spam.</p>
             </div>
         </div>
     </div>
@@ -2303,14 +2341,6 @@
 
         function closeExitPopup() {
             document.getElementById('exitPopup').classList.remove('visible');
-        }
-
-        function handleExitFormSubmit(e) {
-            e.preventDefault();
-            const email = e.target.querySelector('input').value;
-            console.log('Lead captured:', email);
-            alert('Thanks! Check your inbox for the guide.');
-            closeExitPopup();
         }
 
         document.addEventListener('mouseout', (e) => {
