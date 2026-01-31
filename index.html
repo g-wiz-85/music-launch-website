@@ -1400,22 +1400,21 @@
 
         .exit-popup {
             background: #FFFFFF;
-            padding: 2rem;
+            padding: 1.5rem;
+            padding-top: 2.5rem;
             border-radius: 12px;
-            max-width: 450px;
+            max-width: 500px;
             width: 100%;
             position: relative;
             text-align: center;
             transform: scale(0.9);
             transition: transform 0.3s ease;
-            max-height: 90vh;
-            overflow-y: auto;
         }
 
         @media (max-width: 480px) {
             .exit-popup {
-                padding: 1.5rem;
-                max-height: 85vh;
+                padding: 1rem;
+                padding-top: 2.5rem;
             }
         }
 
@@ -1485,11 +1484,7 @@
 
         /* HubSpot Form Styling */
         .exit-popup .hs-form-frame {
-            margin: 1rem 0;
-        }
-
-        .exit-popup .hs-form-frame iframe {
-            max-height: 200px !important;
+            margin: 0;
         }
 
         .exit-popup .hs-form input[type="email"],
