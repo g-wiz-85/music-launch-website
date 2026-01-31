@@ -1837,7 +1837,7 @@
                         </div>
                     </div>
 
-                    <p class="calculator-disclaimer">Year 1: +8 new continuity students @ £150/month. Year 2: +15 total. Revenue share only applies after 5 students.</p>
+                    <p class="calculator-disclaimer">Continuity students @ £450/month. You keep 90% (£405) minus £95/month platform fee. Year 2 assumes 50% student growth.</p>
                 </div>
             </div>
         </section>
@@ -2174,40 +2174,39 @@
 
         // ROI Calculator
         function calculateROI() {
-            const currentHourlyStudents = parseInt(document.getElementById('studentSlider').value);
+            const students = parseInt(document.getElementById('studentSlider').value);
             const hourlyRate = parseInt(document.getElementById('rateSlider').value);
-            const continuityMonthlyFee = 150; // Fixed Music Launch continuity rate
             const weeksPerYear = 40;
             const monthsPerYear = 12;
+            const continuityMonthlyFee = 450; // £450/month per continuity student
+            const teacherShare = 0.90; // Teacher keeps 90%
+            const platformFee = 95; // £95/month platform fee
 
-            // Current income: hourly students × hourly rate × 40 weeks
-            const currentIncome = currentHourlyStudents * hourlyRate * weeksPerYear;
+            // Current income: students × hourly rate × 40 weeks
+            const currentIncome = students * hourlyRate * weeksPerYear;
 
-            // Year 1: Keep existing hourly income + add 8 new continuity students
-            const year1NewContinuityStudents = 8;
-            const year1ContinuityRevenue = year1NewContinuityStudents * continuityMonthlyFee * monthsPerYear;
-            const year1PlatformFee = 95 * monthsPerYear; // £95/month from day one
-            // Revenue share only kicks in after 5 students (so on 3 students worth in Year 1)
-            const year1RevenueShareStudents = Math.max(0, year1NewContinuityStudents - 5);
-            const year1RevenueShare = year1RevenueShareStudents * continuityMonthlyFee * monthsPerYear * 0.10;
-            const year1Fees = year1PlatformFee + year1RevenueShare;
-            const year1Net = currentIncome + year1ContinuityRevenue - year1Fees;
+            // Music Launch model: students convert to continuity @ £450/month
+            // Teacher gets 90% of £450 = £405 per student per month
+            // Minus £95/month platform fee
+            const continuityStudents = students;
+            const teacherMonthlyPerStudent = continuityMonthlyFee * teacherShare; // £405
 
-            // Year 2: Keep existing hourly income + 15 continuity students total
-            const year2ContinuityStudents = 15;
-            const year2ContinuityRevenue = year2ContinuityStudents * continuityMonthlyFee * monthsPerYear;
-            const year2PlatformFee = 95 * monthsPerYear;
-            // Revenue share on all students above 5 threshold
-            const year2RevenueShareStudents = Math.max(0, year2ContinuityStudents - 5);
-            const year2RevenueShare = year2RevenueShareStudents * continuityMonthlyFee * monthsPerYear * 0.10;
-            const year2Fees = year2PlatformFee + year2RevenueShare;
-            const year2Net = currentIncome + year2ContinuityRevenue - year2Fees;
+            // Year 1: (students × £405 × 12) - (£95 × 12)
+            const year1Gross = continuityStudents * teacherMonthlyPerStudent * monthsPerYear;
+            const year1Fees = platformFee * monthsPerYear; // £1,140
+            const year1Net = year1Gross - year1Fees;
+
+            // Year 2: Same calculation but assume 50% more students
+            const year2Students = Math.round(continuityStudents * 1.5);
+            const year2Gross = year2Students * teacherMonthlyPerStudent * monthsPerYear;
+            const year2Fees = platformFee * monthsPerYear;
+            const year2Net = year2Gross - year2Fees;
 
             animateValue('currentIncome', currentIncome);
             animateValue('year1Income', Math.max(0, year1Net));
             animateValue('year2Income', Math.max(0, year2Net));
 
-            document.getElementById('studentCount').textContent = currentHourlyStudents;
+            document.getElementById('studentCount').textContent = students;
             document.getElementById('hourlyRate').textContent = hourlyRate;
         }
 
