@@ -1810,33 +1810,34 @@
                 <div class="calculator-card">
                     <div class="calculator-inputs">
                         <div class="input-group">
-                            <label>Current students: <span id="studentCount">15</span></label>
-                            <input type="range" id="studentSlider" min="0" max="30" value="15">
+                            <label>Current hourly students: <span id="studentCount">10</span></label>
+                            <input type="range" id="studentSlider" min="0" max="25" value="10">
                         </div>
                         <div class="input-group">
-                            <label>Hourly rate: £<span id="rateAmount">30</span></label>
-                            <input type="range" id="rateSlider" min="20" max="60" value="30">
+                            <label>Monthly fee per continuity student: £<span id="monthlyFee">150</span></label>
+                            <input type="range" id="feeSlider" min="100" max="200" value="150" step="10">
                         </div>
                     </div>
 
                     <div class="calculator-results">
                         <div class="result-box current">
                             <span class="label">Current Annual Income</span>
-                            <span class="value" id="currentIncome">£18,000</span>
+                            <span class="value" id="currentIncome">£15,600</span>
+                            <span class="net-label">(hourly teaching)</span>
                         </div>
                         <div class="result-box year1">
                             <span class="label">Year 1 with Music Launch</span>
-                            <span class="value" id="year1Income">£24,860</span>
+                            <span class="value" id="year1Income">£21,420</span>
                             <span class="net-label">(net after fees)</span>
                         </div>
                         <div class="result-box year2 highlight">
                             <span class="label">Year 2 Potential</span>
-                            <span class="value" id="year2Income">£28,860</span>
+                            <span class="value" id="year2Income">£30,420</span>
                             <span class="net-label">(net after fees)</span>
                         </div>
                     </div>
 
-                    <p class="calculator-disclaimer">Estimates based on 40 teaching weeks/year. Results vary by location and availability.</p>
+                    <p class="calculator-disclaimer">Assumes £30/hr current rate, 12 months continuity. Year 1: +8 new students. Year 2: +15 total new students. Revenue share only applies after 5 continuity students.</p>
                 </div>
             </div>
         </section>
@@ -2173,26 +2174,41 @@
 
         // ROI Calculator
         function calculateROI() {
-            const students = parseInt(document.getElementById('studentSlider').value);
-            const rate = parseInt(document.getElementById('rateSlider').value);
+            const currentHourlyStudents = parseInt(document.getElementById('studentSlider').value);
+            const monthlyFee = parseInt(document.getElementById('feeSlider').value);
+            const hourlyRate = 30; // Assumed average hourly rate
             const weeksPerYear = 40;
+            const monthsPerYear = 12;
 
-            const currentIncome = students * rate * weeksPerYear;
-            const year1Students = students + 5;
-            const year1Gross = year1Students * rate * weeksPerYear;
-            const year1Fees = (95 * 12) + (year1Gross * 0.10);
-            const year1Net = year1Gross - year1Fees;
-            const year2Students = students + 10;
-            const year2Gross = year2Students * rate * weeksPerYear;
-            const year2Fees = (95 * 12) + (year2Gross * 0.10);
-            const year2Net = year2Gross - year2Fees;
+            // Current income: hourly students × £30/hr × 40 weeks
+            const currentIncome = currentHourlyStudents * hourlyRate * weeksPerYear;
+
+            // Year 1: Keep existing hourly income + add 8 new continuity students
+            const year1NewContinuityStudents = 8;
+            const year1ContinuityRevenue = year1NewContinuityStudents * monthlyFee * monthsPerYear;
+            const year1PlatformFee = 95 * monthsPerYear; // £95/month from day one
+            // Revenue share only kicks in after 5 students (so on 3 students worth in Year 1)
+            const year1RevenueShareStudents = Math.max(0, year1NewContinuityStudents - 5);
+            const year1RevenueShare = year1RevenueShareStudents * monthlyFee * monthsPerYear * 0.10;
+            const year1Fees = year1PlatformFee + year1RevenueShare;
+            const year1Net = currentIncome + year1ContinuityRevenue - year1Fees;
+
+            // Year 2: Keep existing hourly income + 15 continuity students total
+            const year2ContinuityStudents = 15;
+            const year2ContinuityRevenue = year2ContinuityStudents * monthlyFee * monthsPerYear;
+            const year2PlatformFee = 95 * monthsPerYear;
+            // Revenue share on all students above 5 threshold
+            const year2RevenueShareStudents = Math.max(0, year2ContinuityStudents - 5);
+            const year2RevenueShare = year2RevenueShareStudents * monthlyFee * monthsPerYear * 0.10;
+            const year2Fees = year2PlatformFee + year2RevenueShare;
+            const year2Net = currentIncome + year2ContinuityRevenue - year2Fees;
 
             animateValue('currentIncome', currentIncome);
             animateValue('year1Income', Math.max(0, year1Net));
             animateValue('year2Income', Math.max(0, year2Net));
 
-            document.getElementById('studentCount').textContent = students;
-            document.getElementById('rateAmount').textContent = rate;
+            document.getElementById('studentCount').textContent = currentHourlyStudents;
+            document.getElementById('monthlyFee').textContent = monthlyFee;
         }
 
         function animateValue(elementId, endValue) {
@@ -2214,7 +2230,7 @@
         }
 
         document.getElementById('studentSlider').addEventListener('input', calculateROI);
-        document.getElementById('rateSlider').addEventListener('input', calculateROI);
+        document.getElementById('feeSlider').addEventListener('input', calculateROI);
         calculateROI();
 
         // Animated Stats Counter
