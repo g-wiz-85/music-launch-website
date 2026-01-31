@@ -1470,56 +1470,6 @@
             margin-bottom: 0;
         }
 
-        /* ===== SOCIAL PROOF TOAST ===== */
-        .social-proof-toast {
-            position: fixed;
-            bottom: 2rem;
-            left: 1rem;
-            background: #FFFFFF;
-            padding: 1rem 1.25rem;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            z-index: 997;
-            transform: translateX(-120%);
-            transition: transform 0.4s ease;
-            max-width: 300px;
-        }
-
-        .social-proof-toast.visible {
-            transform: translateX(0);
-        }
-
-        .toast-icon {
-            font-size: 1.5rem;
-        }
-
-        .toast-content {
-            line-height: 1.3;
-        }
-
-        .toast-name {
-            font-weight: 600;
-            color: #1F2937;
-            margin-bottom: 0.125rem;
-            font-size: 0.875rem;
-        }
-
-        .toast-action {
-            color: #6B7280;
-            font-size: 0.8rem;
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 480px) {
-            .social-proof-toast {
-                left: 0.5rem;
-                right: 0.5rem;
-                max-width: none;
-            }
-        }
 
         /* ===== COOKIE BANNER ===== */
         .cookie-banner {
@@ -2174,14 +2124,6 @@
         </div>
     </div>
 
-    <!-- Social Proof Toast -->
-    <div class="social-proof-toast" id="socialProofToast">
-        <div class="toast-icon">🎹</div>
-        <div class="toast-content">
-            <p class="toast-name" id="toastName">Sarah from Manchester</p>
-            <p class="toast-action" id="toastAction">just booked a discovery call</p>
-        </div>
-    </div>
 
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookieBanner">
@@ -2373,42 +2315,6 @@
                 closeExitPopup();
             }
         });
-
-        // Social Proof Notifications
-        const socialProofData = [
-            { name: "Sarah from Manchester", action: "just booked a discovery call" },
-            { name: "James from Bristol", action: "joined Music Launch yesterday" },
-            { name: "Emma from London", action: "got her first 3 leads this week" },
-            { name: "David from Edinburgh", action: "just booked a discovery call" },
-            { name: "Sophie from Birmingham", action: "converted 4 students last month" },
-            { name: "Michael from Leeds", action: "just signed up for Music Launch Pro" },
-            { name: "Charlotte from Oxford", action: "filled her calendar in 6 weeks" }
-        ];
-
-        let currentProofIndex = 0;
-
-        function showSocialProof() {
-            const toast = document.getElementById('socialProofToast');
-            const nameEl = document.getElementById('toastName');
-            const actionEl = document.getElementById('toastAction');
-
-            const proof = socialProofData[currentProofIndex];
-            nameEl.textContent = proof.name;
-            actionEl.textContent = proof.action;
-
-            toast.classList.add('visible');
-
-            setTimeout(() => {
-                toast.classList.remove('visible');
-            }, 4000);
-
-            currentProofIndex = (currentProofIndex + 1) % socialProofData.length;
-        }
-
-        setTimeout(() => {
-            showSocialProof();
-            setInterval(showSocialProof, 18000);
-        }, 10000);
 
         // Cookie Consent
         function checkCookieConsent() {
